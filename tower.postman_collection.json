@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "b4356c12-e6d8-4afc-829a-989c28631865",
+		"name": "tower",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/tower",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/tower",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tower"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/tower",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"height\": 420,\n    \"name\": \"wierza\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/tower",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tower"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/tower",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"height\": 123,\n    \"name\": \"wiesza\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/tower",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tower"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/tower/5",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/tower/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tower",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
