@@ -3,8 +3,7 @@ package com.example.lab4.tower;
 import com.example.lab4.tower.dto.TowerCreateDto;
 import com.example.lab4.tower.dto.TowerResponseDto;
 import com.example.lab4.tower.dto.TowerUpdateDto;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import lombok.AllArgsConstructor;
 
 import javax.transaction.Transactional;
 import java.util.Collection;
@@ -12,12 +11,11 @@ import java.util.Collection;
 import static com.example.lab4.tower.TowerMapper.toDto;
 import static com.example.lab4.tower.TowerMapper.toEntity;
 
-@Service
 @Transactional
+@AllArgsConstructor
 public class TowerService {
 
-    @Autowired
-    private TowerRepository towerRepository;
+    private final TowerRepository towerRepository;
 
     public Collection<TowerResponseDto> findAll(){
         Collection <TowerEntity> entities = towerRepository.findAll();
