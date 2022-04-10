@@ -1,6 +1,7 @@
 package com.example.lab4.mage;
 
 import com.example.lab4.mage.dto.*;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -8,10 +9,10 @@ import java.util.Collection;
 
 @RestController
 @RequestMapping(path = "/mage")
+@AllArgsConstructor
 public class MageController {
 
-    @Autowired
-    private MageService mageService;
+    private final MageService mageService;
 
     @GetMapping
     public Collection<MageListDto> findAll(){

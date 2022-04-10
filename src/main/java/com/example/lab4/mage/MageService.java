@@ -3,6 +3,7 @@ package com.example.lab4.mage;
 import com.example.lab4.mage.dto.*;
 import com.example.lab4.tower.TowerEntity;
 import com.example.lab4.tower.TowerRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,15 +13,13 @@ import java.util.Collection;
 import static com.example.lab4.mage.MageMapper.toDto;
 import static com.example.lab4.mage.MageMapper.toEntity;
 
-@Service
 @Transactional
+@AllArgsConstructor
 public class MageService {
 
-    @Autowired
-    private MageRepository mageRepository;
+    private final MageRepository mageRepository;
 
-    @Autowired
-    private TowerRepository towerRepository;
+    private final TowerRepository towerRepository;
 
     public Collection<MageListDto> findAll() {
         Collection<MageEntity> entities = mageRepository.findAll();

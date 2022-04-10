@@ -41,6 +41,10 @@ public class TowerService {
     }
 
     public void deleteById(Long id){
-        towerRepository.deleteById(id);
+        try {
+            towerRepository.deleteById(id);
+        } catch (Exception ex) {
+            throw new IllegalArgumentException();
+        }
     }
 }
