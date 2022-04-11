@@ -32,7 +32,7 @@ public class TowerRepositoryTest implements TowerRepository {
 
     @Override
     public Optional<TowerEntity> findById(Long aLong) {
-        throw new RuntimeException();
+        return Optional.ofNullable(towers.get(aLong));
     }
 
     @Override
